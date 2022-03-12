@@ -1,0 +1,163 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: ZH-Sans, Arial, "Lucida Sans Unicode", sans-serif;
+}
+
+#container {
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
+}
+
+#navbar {
+  margin: auto;
+  width: 99%;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+#logo1 {
+  width: 300px;
+  height: 100px;
+  margin-left: 10px;
+  background-color: transparent;
+}
+
+#left {
+  flex: 49%;
+  margin: 1px;
+}
+#left > div > p {
+  font-family: ZH-Sans, Arial, "Lucida Sans Unicode", sans-serif;
+  font-size: 110%;
+  letter-spacing: 15px;
+  color: black;
+  font-weight: 100;
+}
+
+#middle {
+  width: 36%;
+}
+
+#right {
+  width: 15%;
+}
+
+#left > span {
+  color: black;
+  padding: 20px 15px;
+  margin: 0 0 0 10px;
+}
+
+.button {
+  padding: 10px 10px 10px 10px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border: 3px solid transparent;
+}
+
+#middle label {
+  font-size: 18px;
+  font-weight: 500;
+  color: black;
+  margin-left: 5%;
+}
+
+#middle input {
+  outline: none;
+  border: none;
+  border-bottom: 2px solid black;
+  border-left: 0;
+  border-top: 0;
+  border-right: 0;
+  background-color: transparent;
+  color: black;
+  font-size: 18px;
+  margin-left: 10px;
+}
+
+#right {
+  justify-content: space-around;
+  margin-left: 10%;
+  color: black;
+  font-size: 18px;
+  font-weight: 400;
+}
+#right > div i {
+  font-size: 20px;
+  font-weight: 200;
+  padding-top: 5px;
+}
+section {
+  width: 300px;
+  height: 80vh;
+  margin: 0;
+  padding: 0;
+  background: white;
+  display: none;
+  position: relative;
+  float: left;
+  margin-top: -90px;
+  border:2px solid red;
+}
+#nav-div:hover section {
+  width: 330px;
+  background: white;
+  display: block;
+}
+#nav-div:hover #zara {
+  letter-spacing: 10px;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+#menu_list ul {
+  position: absolute;
+  list-style: none;
+  width: 80%;
+}
+#menu_list ul li {
+  line-height: 22px;
+  cursor: pointer;
+  width: 100%;
+  margin: 4px 0 3px 0px;
+  margin-left: -15px;
+}
+#menu_list ul li label {
+  font-size: 16px;
+}
+#menu_list ul li a:hover,
+#menu_list ul li label:hover {
+  color: gray;
+}
+#menu_list ul ul {
+  position: static;
+  margin-top: 5px;
+}
+#menu_list ul ul li {
+  font-size: 16px;
+  line-height: 25px;
+}
+#bedroom,
+#newin,
+#clothing,
+#living,
+#dining,
+#bathroom,
+#kids,
+#stories,
+#info {
+  display: none;
+}

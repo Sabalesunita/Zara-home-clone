@@ -1,0 +1,47 @@
+#bedcontainer {
+  width: 95%;
+  margin: auto;
+  text-align: center;
+margin-top: 6%;
+}
+body{
+  font-family: ZH-Sans,Arial,'Lucida Sans Unicode',sans-serif;
+  color: #515151;
+  font-size: 80%;
+  word-spacing: 2px;
+}
+
+#bedcontainer{
+  display: grid;
+  grid-template-columns: repeat(2, 49%);
+  grid-template-rows:repeat(10, 450px);
+  grid-gap: 3%;
+  /* grid-column-gap: 5%; */
+ 
+}
+button{
+  background-color: transparent;
+  color: transparent;
+  width: 100%;
+  text-align: center;
+  padding: 13px;
+  cursor: pointer;
+border: 1px solid transparent;
+}
+button:hover{
+  background-color: black;
+  color: white;
+  border: transparent;
+}
+image{
+  width: 100%;
+}
+
+#buttondiv{
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+

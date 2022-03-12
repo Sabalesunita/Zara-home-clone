@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+  width: 95%;
+  margin: auto;
+  text-align: center;
+
+}
+body{
+  font-family: ZH-Sans,Arial,'Lucida Sans Unicode',sans-serif;
+  color: #515151;
+  font-size: 80%;
+  word-spacing: 2px;
+}
+
+#container{
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  /* grid-template-rows:repeat(1, 250px); */
+  grid-gap: 2%;
+  /* grid-column-gap: 5%; */
+ 
+}
+button{
+  background-color: transparent;
+  color: transparent;
+  width: 100%;
+  text-align: center;
+  padding: 13px;
+  cursor: pointer;
+border: 1px solid transparent;
+}
+button:hover{
+  background-color: black;
+  color: white;
+  border: transparent;
+}
+image{
+  width: 100%;
+}
+
+#buttondiv{
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+
+
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+</body>
+</html>
+<script>
+    var data = [
+    {
+        imgUrl:"https://static.zarahome.net/8/photos4/2021/I/4/1/p/1622/091/926/1622091926_2_7_5.jpg?t=1629385572390",
+        name:"MERMAID PILLOWCASE",
+        price:"9.99 €",
+       
+    },
+    {
+        imgUrl:"https://static.zarahome.net/8/photos4/2021/I/4/1/p/1610/091/802/1610091802_7_1_3.jpg?t=1629316650158",
+        name:"ELEPHANTS ON THE BEACH PILLOWCASE",
+        price:"9.99 € ",
+       
+    },
+    {
+        imgUrl:"https://static.zarahome.net/8/photos4/2022/V/4/1/p/5600/091/250/5600091250_2_7_5.jpg?t=1580204180489",
+        name:"COTTON PERCALE PILLOWCASE",
+        price:"2.99 € ",
+       
+    }
+    ];
+
+
+    data.map(function(elem){
+    
+    var bed_card = document.createElement("div");
+     var bed_card_div = document.createElement("div");
+     var card = document.createElement("div");
+    bed_card_div.style.backgroundImage = `url(${elem.imgUrl})`;
+    bed_card_div.id = "buttondiv";
+    // var image = document.createElement("img");
+    // image.setAttribute("src", elem.imgUrl);
+
+    var button = document.createElement("button");
+    button.textContent = "Add to Basket";
+
+    var item_name = document.createElement("p");
+    item_name.textContent = elem.name;
+
+    var price = document.createElement("p");
+    price.innerHTML = elem.price;
+
+
+    bed_card.append(item_name,price);
+    bed_card_div.append(button,bed_card);
+    card.append(bed_card_div,bed_card);
+    document.querySelector("#container").append(card);
+
+});
+
+
+
+
+</script>
